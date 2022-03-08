@@ -15,6 +15,8 @@ function initMap() {
 });
 
 
+
+
   // When the user clicks on the button
 
 //   document.getElementById("submit-btn").addEventListener("click",()=>{
