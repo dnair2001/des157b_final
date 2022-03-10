@@ -17,7 +17,7 @@
       <div id="myLinks">
         <a href="hotline.html">Hotline</a>
         <a href="voices.html">Alarms</a>
-        <a href="map.html">Map</a>
+        <a href="new_map.html">Map</a>
         <a href="story.html">Share Your Story</a>
       </div>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -29,23 +29,23 @@
         <h2>Universtiy of California, Davis</h2>
     </section>
     <section style="display: flex; padding: 2%;">
-        <i style="display: left;padding: 5px;color: #9E0761;" class="fa-solid fa-play sound-heading"></i>
-        <h1 style="display: right;" class="sound-heading">Recording 1</h1>
+        <i style="display: left;padding: 5px;color: #9E0761;" class="fa-solid fa-play sound-heading" id="recording-1"></i>
+        <h1 style="display: right;" class="sound-heading">If Someone Is Following You</h1>
     </section>
     <hr>
     <section style="display: flex; padding: 2%;">
-        <i style="display: left;padding: 5px;color: #9E0761;" class="fa-solid fa-play sound-heading"></i>
-        <h1 style="display: right;" class="sound-heading">Recording 2</h1>
+        <i style="display: left;padding: 5px;color: #9E0761;" class="fa-solid fa-play sound-heading" id="recording-2"></i>
+        <h1 style="display: right;" class="sound-heading">If You Feel Unsafe In An Uber</h1>
     </section>
     <hr>
     <section style="display: flex; padding: 2%;">
-        <i style="display: left;padding: 5px;color: #9E0761;" class="fa-solid fa-play sound-heading"></i>
-        <h1 style="display: right;" class="sound-heading">Recording 3</h1>
+        <i style="display: left;padding: 5px;color: #9E0761;" class="fa-solid fa-play sound-heading" id="recording-3"></i>
+        <h1 style="display: right;" class="sound-heading">Alarm 1</h1>
     </section>
     <hr>
     <section style="display: flex; padding: 2%;">
-        <i style="display: left;padding: 5px;color:#9E0761;" class="fa-solid fa-play sound-heading"></i>
-        <h1 style="display: right;" class="sound-heading">Recording 4</h1>
+        <i style="display: left;padding: 5px;color:#9E0761;" class="fa-solid fa-play sound-heading" id="recording-4"></i>
+        <h1 style="display: right;" class="sound-heading">Alarm 2</h1>
     </section>
     <hr>
     <script>
@@ -57,6 +57,41 @@
             x.style.display = "block";
           }
         }
+
+        (function () {
+            'use strict';
+
+            // variable for the element, then for the sound
+            const playbutton1 = document.getElementById('recording-1');
+            const recording1 = new Audio('../audio/followingYou.mp3');
+
+            const playbutton2 = document.getElementById('recording-2');
+            const recording2 = new Audio('../audio/unsafeUber.mp3');
+
+            const playbutton3 = document.getElementById('recording-3');
+            const recording3 = new Audio('../audio/followingYou.mp3');
+
+            const playbutton4 = document.getElementById('recording-4');
+            const recording4 = new Audio('../audio/followingYou.mp3');
+
+            //sound plays when the mousebutton is down
+            playbutton1.addEventListener('click', function () {
+              recording1.play();
+            });
+
+            playbutton2.addEventListener('click', function () {
+              recording2.play();
+            });
+
+            playbutton3.addEventListener('click', function () {
+              recording3.play();
+            });
+
+            playbutton4.addEventListener('click', function () {
+              recording4.play();
+            });
+        })();
+
     </script>
 </body>
 </html>
