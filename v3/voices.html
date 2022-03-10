@@ -16,8 +16,8 @@
       <a href="index.html" class="active">Home &#10084;</a>
       <div id="myLinks">
         <a href="hotline.html">Hotline</a>
-        <a href="voices.html">Voice Recordings.</a>
-        <a href="map.html">Map</a>
+        <a href="voices.html">Alarms</a>
+        <a href="new_map.html">Map</a>
         <a href="story.html">Share Your Story</a>
       </div>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -53,6 +53,41 @@
             x.style.display = "block";
           }
         }
+
+        (function () {
+            'use strict';
+
+            // variable for the element, then for the sound
+            const playbutton1 = document.getElementById('recording-1');
+            const recording1 = new Audio('../audio/followingYou.mp3');
+
+            const playbutton2 = document.getElementById('recording-2');
+            const recording2 = new Audio('../audio/unsafeUber.mp3');
+
+            const playbutton3 = document.getElementById('recording-3');
+            const recording3 = new Audio('../audio/followingYou.mp3');
+
+            const playbutton4 = document.getElementById('recording-4');
+            const recording4 = new Audio('../audio/followingYou.mp3');
+
+            //sound plays when the mousebutton is down
+            playbutton1.addEventListener('click', function () {
+              recording1.play();
+            });
+
+            playbutton2.addEventListener('click', function () {
+              recording2.play();
+            });
+
+            playbutton3.addEventListener('click', function () {
+              recording3.play();
+            });
+
+            playbutton4.addEventListener('click', function () {
+              recording4.play();
+            });
+        })();
+
     </script>
 </body>
 </html>
