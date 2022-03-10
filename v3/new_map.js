@@ -80,8 +80,9 @@ async function saveNewPerson(address_string, address) {
         try {
           console.log(result.id);
           const results = await person.get(result.id);
-          
+          alert("Please refresh the page to see your pin on the map!");
           leafletMap(result); 
+
       }  
       catch{
           console.log("ERROR"); 
